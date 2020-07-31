@@ -1,0 +1,49 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 25, 2020, 1:45:48 PM
+    Author     : hp
+*/
+
+/* 
+   spacing donate button
+*/
+
+.space5 {margin:5px;}
+.space27{margin-top:27px;
+margin-bottom: 27px}
+.white {color:#fff;}
+.footer{
+        background-image: url("../images/footercover.jpg");
+        background-size: cover;
+        background-position: top center;
+	background-repeat: no-repeat;
+        min-height: 200px;
+}
+.donate_section {
+    width: 100%;
+    float: left;
+    margin: 0;
+    padding: 50px;
+    border-top: 5px dashed #fff;
+    background: #ee0979;
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);
+    background: linear-gradient(to right, rgba(39, 133, 249, 0.95), rgba(104, 24, 219, 0.95)), url(../images/bg-information-2.jpg);
+}
+   .donate_section a.donate_now {
+    display: block;
+    width: 21%;
+    float: none;
+    margin: 1em auto 0;
+    padding: 10px 25px;
+    color: #fff;
+    border: 3px solid;
+    border-radius: 45px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    cursor: pointer;
+} 
