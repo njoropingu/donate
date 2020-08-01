@@ -2,7 +2,7 @@
 Pesapal API integration for making pesapal donations
 
 Step 1
-Create a database and import the donateb.sql file
+Create a database and import the donate.sql file
 
 Step 2
 open application folder, then config folder and then config.php file.
