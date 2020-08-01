@@ -14,3 +14,5 @@ that is the values for lines 78,79,80 and 81
 
 Step 4
 then run the application using your favourite browser.
+
+NB: kindly ensure you have installed composer on your computer
