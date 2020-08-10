@@ -1,6 +1,4 @@
-<?php
-
-defined('BASEPATH') OR exit('no direct script access allowed');
+<?php defined('BASEPATH') OR exit('no direct script access allowed');
 
 class Donors extends CI_Controller {
 
@@ -45,5 +43,6 @@ class Donors extends CI_Controller {
             echo 'Sorry, above transaction wasnt succesful!';
         }
     }
+    
 
 }

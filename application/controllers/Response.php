@@ -7,9 +7,9 @@ class Response extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-        $this->load->library('pesapal');
+     
         $this->load->model('donor_model');
-        $this->load->model('pesaJwt');
+        $this->load->model('pesaSend');
     }
 
     public function index() {
@@ -71,7 +71,7 @@ class Response extends CI_Controller {
         $donorI = $this->donor_model->getDonors($pesapal_merchant_reference);
         $donorInfo = $donorI[0];
         log_message('debug', json_encode($donorInfo));
-        $this->pesaJwt->transData($donorInfo->first_name, $donorInfo->last_name, $donorInfo->phone, $donorInfo->description, $donorInfo->date, $donorInfo->amount, $pesapal_transaction_tracking_id, $pesapal_merchant_reference, $status);
+        $this->pesaSend->transData($donorInfo->first_name, $donorInfo->last_name, $donorInfo->phone, $donorInfo->description, $donorInfo->date, $donorInfo->amount, $pesapal_transaction_tracking_id, $pesapal_merchant_reference, $status);
 
         if ($status == 'SUCCESS') {
             redirect(base_url('thankyou'));
@@ -143,7 +143,7 @@ class Response extends CI_Controller {
             $donorI = $this->donor_model->getDonors($pesapal_merchant_reference);
             $donorInfo = $donorI[0];
             log_message('debug', json_encode($donorInfo));
-            $this->pesaJwt->transData($donorInfo->first_name, $donorInfo->last_name, $donorInfo->phone, $donorInfo->description, $donorInfo->date, $donorInfo->amount, $pesapal_transaction_tracking_id, $pesapal_merchant_reference, $status);
+            $this->pesaSend->transData($donorInfo->first_name, $donorInfo->last_name, $donorInfo->phone, $donorInfo->description, $donorInfo->date, $donorInfo->amount, $pesapal_transaction_tracking_id, $pesapal_merchant_reference, $status);
         }
     }
 

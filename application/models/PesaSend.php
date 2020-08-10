@@ -2,7 +2,7 @@
 
 defined('BASEPATH') OR exit('no direct script access allowed');
 
-class PesaJwt extends CI_Model {
+class PesaSend extends CI_Model {
 
     public function transData($first_name,$last_name,$phone,$description,$date,$amount,$pesapal_transaction_tracking_id,$pesapal_merchant_reference,$status) {
         /* API URL */

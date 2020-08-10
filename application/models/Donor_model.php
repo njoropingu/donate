@@ -18,5 +18,9 @@ class Donor_model extends CI_Model{
     function track($data){
         $this->db->insert('pesapal_track',$data);
     }
+    function insertParam($data){
+        $this->db->where(array('id'=>1));
+       $this->db->update('param',$data);
+    }
 }
 
