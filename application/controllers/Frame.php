@@ -10,6 +10,7 @@ class Frame extends CI_Controller {
     }
 
     function index() {
+       
         $reference_id = $this->session->flashdata('reference_id');
         $first_name = $this->session->flashdata('first_name');
         $last_name = $this->session->flashdata('last_name');
@@ -25,6 +26,7 @@ class Frame extends CI_Controller {
                 'amount' => $amount,
                 'description' => $description
             );
+             $data['param']= $this->donor_model->getParameters();
             $this->load->view('pesapal-iframe', $data);
         } else {
             redirect(base_url('home'));

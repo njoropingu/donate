@@ -1,4 +1,5 @@
 <div class="container space27">
+
     <p class="space27" style="text-align: center; font-size:22px">welcome to Pesapal donation text platform</p>
 
     <div class="row">
@@ -24,7 +25,7 @@
                         </div>
                     </div></div>
 
-  
+
 
                 <div class="form-group">
                     <div class="row">
@@ -33,7 +34,7 @@
                             <input type="text" class="form-control" name="phone" placeholder="Your Phone *" required>
                         </div>
                     </div></div>
-             
+
 
                 <div class="form-group">
                     <div class="row">
