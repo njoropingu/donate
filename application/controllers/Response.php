@@ -94,13 +94,13 @@ class Response extends CI_Controller {
             'tracking_id' => $pesapal_transaction_tracking_id
         );
         $this->donor_model->track($data);
-
+         $param= $this->donor_model->getParameters();
         if ($pesapalNotification == "CHANGE" && $pesapal_transaction_tracking_id != '') {
-            $consumer_key = "MYFar3WdmpU2bhjighVq+qcUkWSrA4Og"; //Register a merchant account on
+            $consumer_key = $param->conkey; //Register a merchant account on
             //demo.pesapal.com and use the merchant key for testing.
             //When you are ready to go live make sure you change the key to the live account
             //registered on www.pesapal.com!
-            $consumer_secret = "AZGIyTvbSui+V4S4xOfdZcQ+Kb4="; // Use the secret from your test
+            $consumer_secret = $param->secret; // Use the secret from your test
             //account on demo.pesapal.com. When you are ready to go live make sure you 
             //change the secret to the live account registered on www.pesapal.com!
             $statusrequestAPI = 'https://demo.pesapal.com/api/querypaymentstatus'; //change to      
